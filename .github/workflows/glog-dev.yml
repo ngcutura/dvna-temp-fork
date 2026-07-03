@@ -1,4 +1,4 @@
-name: Glog.AI Scan
+name: Glog Scan (dev)
 
 on: 
   workflow_dispatch:
