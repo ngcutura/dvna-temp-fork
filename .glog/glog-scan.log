@@ -1,2 +1,2 @@
-Jul 03, 2026 9:52:11 AM ai.glog.inventory.ComponentResolver resolve
-INFO: Resolved component_uuid=165daf1b-e786-404c-9ae9-92408e06f079 status=pending is_new=true
+Jul 03, 2026 10:00:16 AM ai.glog.inventory.ComponentResolver resolve
+INFO: Resolved component_uuid=165daf1b-e786-404c-9ae9-92408e06f079 status=pending is_new=false

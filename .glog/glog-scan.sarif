@@ -270,29 +270,6 @@
               }
             },
             {
-              "id": "2f335277-0daf-3f5d-aec0-0236fed03f90",
-              "name": "Explicit Unescape In EJS Template",
-              "helpUri": "https://www.glog.ai/",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\n\"EJS Template XSS Vulnerability Detected Due to Unescaped External Data\" is a vulnerability that occurs when an application includes untrusted data in a new web page without proper validation or escaping, or updates an existing web page with user-supplied data using a browser API that can create HTML or JavaScript. This allows attackers to execute scripts in the victim's browser which can hijack user sessions, deface web sites, or redirect the user to malicious sites.\n\nIn the provided code snippet, the vulnerability arises from the use of `<%-` which does not escape HTML entities, thus allowing potential Cross-Site Scripting (XSS) attacks if `output.products[i].tags` contains malicious scripts.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, always use `<%= ... %>` instead of `<%- ... %>`. The `<%= ... %>` syntax automatically escapes HTML entities, thus preventing potential XSS attacks.\n\n## Source Code Fix Recommendation\n\nHere is the fixed version of the provided code snippet:\n\n```javascript\n<td><%= output.products[i].tags %></td>\n```\n\n## Library Dependencies\n\nThe code example requires the following library dependencies:\n\n- EJS (Embedded JavaScript templates)\n\n## OWASP and CWE Resources\n\n- [OWASP Cross-Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)\n- [OWASP XSS Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)\n- [CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)"
-              },
-              "properties": {
-                "cwe": [
-                  {
-                    "id": "CWE-79",
-                    "url": "https://cwe.mitre.org/data/definitions/79.html"
-                  }
-                ],
-                "kind": "FAIL",
-                "security-severity": "5.0",
-                "tags": [
-                  "security",
-                  "CWE-79"
-                ]
-              }
-            },
-            {
               "id": "304c736c-8339-3edd-8a47-866f035a5f6c",
               "name": "Predictable Token Using Weak Hashing",
               "helpUri": "https://www.glog.ai/",
@@ -689,29 +666,6 @@
               }
             },
             {
-              "id": "6402bde6-4b8f-382b-8889-386c2b48e4c5",
-              "name": "Unescaped EJS Output Allows XSS Attacks",
-              "helpUri": "https://www.glog.ai/",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\nEJS (Embedded JavaScript) is a popular templating engine for JavaScript. It allows developers to generate HTML with plain JavaScript. However, it can be vulnerable to Cross-Site Scripting (XSS) attacks if not used properly. In particular, the use of `<%-` instead of `<%=` can lead to an unescaped output vulnerability. This means that the output is not sanitized, and any JavaScript code included in the output will be executed when the HTML is rendered in the browser.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, always use `<%=` instead of `<%-` to ensure that the output is properly escaped. This will prevent any JavaScript code in the output from being executed. Additionally, always validate and sanitize user input to ensure that it does not contain any malicious code.\n\n## Source Code Fix Recommendation\n\nChange the vulnerable line of code from:\n\n```javascript\n<td><%- output.products[i].tags %></td>\n```\n\nto:\n\n```javascript\n<td><%= output.products[i].tags %></td>\n```\n\n## Library Dependencies\n\nThe code example requires the following library dependencies:\n\n- EJS\n\n## OWASP and CWE Links\n\n- [OWASP Cross-Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)\n- [CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)"
-              },
-              "properties": {
-                "cwe": [
-                  {
-                    "id": "CWE-79",
-                    "url": "https://cwe.mitre.org/data/definitions/79.html"
-                  }
-                ],
-                "kind": "FAIL",
-                "security-severity": "5.0",
-                "tags": [
-                  "security",
-                  "CWE-79"
-                ]
-              }
-            },
-            {
               "id": "649ef06b-8197-3b90-b556-386f21d792c4",
               "name": "Insecure Deserialization Can Lead To Remote Code Execution",
               "helpUri": "https://www.glog.ai/",
@@ -1035,7 +989,7 @@
             },
             {
               "id": "96bf9b6a-fcf1-3eab-be8e-47ba3cb8bd10",
-              "name": "Insecure Logging Configuration In Sequelize",
+              "name": "Insecure Logging Configuration",
               "helpUri": "https://www.glog.ai/",
               "help": {
                 "text": "",
@@ -1145,52 +1099,6 @@
                 "tags": [
                   "security",
                   "CWE-346"
-                ]
-              }
-            },
-            {
-              "id": "9ddac073-078f-3f4f-be28-cec815d2e54b",
-              "name": "Unescaped EJS Output Allows XSS Attacks",
-              "helpUri": "https://www.glog.ai/",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\n\"EJS Output Unescaped Vulnerability Detected: Potential for XSS Attacks\" is a vulnerability that can occur in JavaScript applications that use the EJS (Embedded JavaScript) templating library. This vulnerability arises when untrusted data is included in a web page without proper sanitization or validation, allowing an attacker to inject malicious scripts into the web page. These scripts can then be executed in the browser of any user viewing the page, leading to Cross-Site Scripting (XSS) attacks.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to always escape output that includes untrusted data. This can be done using the `<%= %>` syntax in EJS, which automatically escapes the output. Additionally, it is also recommended to validate and sanitize all user inputs to ensure that they do not contain any malicious scripts.\n\n## Source Code Fix Recommendation\n\nThe specific vulnerability sink can be fixed by replacing the `<%- %>` syntax with `<%= %>`. Here is the fixed code:\n\n```javascript\n<td><%= output.products[i].name %></td>\n```\n\n## Library Dependencies\n\nThe code example requires the following library dependencies to execute properly:\n\n- EJS (Embedded JavaScript)\n\n## OWASP Resources\n\n- [OWASP Cross-Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)\n- [OWASP XSS (Cross Site Scripting) Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)\n\n## Common Weakness Enumeration (CWE)\n\n- [CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)"
-              },
-              "properties": {
-                "cwe": [
-                  {
-                    "id": "CWE-79",
-                    "url": "https://cwe.mitre.org/data/definitions/79.html"
-                  }
-                ],
-                "kind": "FAIL",
-                "security-severity": "5.0",
-                "tags": [
-                  "security",
-                  "CWE-79"
-                ]
-              }
-            },
-            {
-              "id": "a4078dd5-7e65-3838-a623-e91351920969",
-              "name": "Explicit Unescape In EJS Template",
-              "helpUri": "https://www.glog.ai/",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\n\"EJS Template XSS Vulnerability Detected Due to Unescaped External Data\" is a vulnerability that occurs when unescaped external data is used in an EJS template. This can lead to Cross-Site Scripting (XSS) attacks, where an attacker can inject malicious scripts into web pages viewed by other users. These scripts can steal sensitive information, perform actions on behalf of the user, or exploit other vulnerabilities in the user's browser.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, always escape external data before using it in an EJS template. This can be done using the `<%= %>` syntax, which automatically escapes HTML characters. Never use the `<%- %>` syntax with external data, as this does not escape HTML characters.\n\n## Source Code Fix Recommendation\n\nHere is the fixed version of the provided code:\n\n```javascript\n<td><%= output.products[i].name %></td>\n```\n\n## Library Dependencies\n\nThe code example requires the following library dependencies:\n\n- EJS\n\n## OWASP and CWE Resources\n\n- [OWASP Cross-Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)\n- [CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)"
-              },
-              "properties": {
-                "cwe": [
-                  {
-                    "id": "CWE-79",
-                    "url": "https://cwe.mitre.org/data/definitions/79.html"
-                  }
-                ],
-                "kind": "FAIL",
-                "security-severity": "5.0",
-                "tags": [
-                  "security",
-                  "CWE-79"
                 ]
               }
             },
@@ -1334,29 +1242,6 @@
                 "tags": [
                   "security",
                   "CWE-611"
-                ]
-              }
-            },
-            {
-              "id": "b9d092ad-9fe6-37c3-a547-9d2e7e325016",
-              "name": "Explicit Unescape In EJS Template",
-              "helpUri": "https://www.glog.ai/",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\n\"EJS Template XSS Vulnerability Detected Due to Unescaped External Data\" is a vulnerability that occurs when an application includes untrusted data in a new web page without proper validation or escaping, or updates an existing web page with user-supplied data using a browser API that can create HTML or JavaScript. This allows attackers to execute scripts in the victim's browser which can hijack user sessions, deface web sites, or redirect the user to malicious sites.\n\nIn the provided code snippet, the application is using EJS (Embedded JavaScript) templates to generate HTML markup with plain JavaScript. The `<%- %>` syntax in EJS is used to output the unescaped value into the template. This means that if `output.products[i].description` contains any malicious script, it will be executed when the page is rendered.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, always use proper output encoding when inserting untrusted data into HTML element content or attribute. In EJS, use `<%= %>` syntax to output the escaped value into the template. This will ensure that any special characters are properly encoded and will not be interpreted as script.\n\n## Source Code Fix Recommendation\n\nReplace the vulnerable code:\n\n```javascript\n<td><%- output.products[i].description %></td>\n```\n\nwith the fixed code:\n\n```javascript\n<td><%= output.products[i].description %></td>\n```\n\n## Library Dependencies\n\nThe code example requires the following library dependencies:\n\n- EJS: A JavaScript templating engine for generating HTML markup with plain JavaScript.\n\n## References\n\n- [OWASP Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)\n- [CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)"
-              },
-              "properties": {
-                "cwe": [
-                  {
-                    "id": "CWE-79",
-                    "url": "https://cwe.mitre.org/data/definitions/79.html"
-                  }
-                ],
-                "kind": "FAIL",
-                "security-severity": "5.0",
-                "tags": [
-                  "security",
-                  "CWE-79"
                 ]
               }
             },
@@ -1522,29 +1407,6 @@
               }
             },
             {
-              "id": "da3dd6af-a082-3745-9e08-885cad581ed2",
-              "name": "Unescaped EJS Output Allows XSS Attacks",
-              "helpUri": "https://www.glog.ai/",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\n\"Detected Unescaped EJS Output Vulnerability Allowing XSS Attacks\" is a security vulnerability in JavaScript programming language that occurs when user input is not properly sanitized or escaped before being rendered on a webpage. This can lead to Cross-Site Scripting (XSS) attacks, where an attacker can inject malicious scripts into webpages viewed by other users. In the context of EJS (Embedded JavaScript) templates, this vulnerability can occur when the `<%- %>` syntax is used, which does not escape HTML characters.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, always escape user input that is rendered on a webpage. In EJS, you can use the `<%= %>` syntax to automatically escape HTML characters. This will prevent any HTML tags in the user input from being interpreted as code by the browser.\n\n## Source Code Fix Recommendation\n\nReplace the `<%- %>` syntax with `<%= %>` to automatically escape HTML characters:\n\n```javascript\n<td><%= output.products[i].description %></td>\n```\n\n## Library Dependencies\n\nThe code example requires the following library dependencies:\n\n- EJS: A JavaScript templating engine used to generate HTML markup with plain JavaScript.\n\n## OWASP Resources\n\n- [OWASP Cross-Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)\n- [OWASP XSS Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)\n\n## Common Weakness Enumeration (CWE)\n\n- [CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)"
-              },
-              "properties": {
-                "cwe": [
-                  {
-                    "id": "CWE-79",
-                    "url": "https://cwe.mitre.org/data/definitions/79.html"
-                  }
-                ],
-                "kind": "FAIL",
-                "security-severity": "5.0",
-                "tags": [
-                  "security",
-                  "CWE-79"
-                ]
-              }
-            },
-            {
               "id": "dc91c059-b8d7-3ca2-81bb-4e6950613c8c",
               "name": "SQL Injection Due To Unsanitized User Input",
               "helpUri": "https://www.glog.ai/",
@@ -1637,29 +1499,6 @@
               }
             },
             {
-              "id": "e98f11bd-d469-3d24-aa10-8a0ffc00adb0",
-              "name": "Unescaped EJS Output Allows XSS Attacks",
-              "helpUri": "https://www.glog.ai/",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\n\"Detected Unescaped EJS Output Vulnerability Allowing XSS Attacks\" is a security vulnerability in JavaScript that occurs when user input is not properly sanitized or escaped before being rendered on a webpage. This can lead to Cross-Site Scripting (XSS) attacks, where an attacker can inject malicious scripts into webpages viewed by other users. These scripts can steal sensitive information, perform actions on behalf of the user, or exploit other vulnerabilities in the web application.\n\nIn the provided code snippet, the vulnerability arises from the use of `<%-` instead of `<%=`, which results in the output not being escaped. This means that if `output.products[i].id` contains any script, it will be executed when the page is rendered.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, always escape user input before rendering it on a webpage. This can be done by using the `<%=` syntax in EJS, which automatically escapes the output.\n\n## Source Code Fix Recommendation\n\nHere is the fixed version of the provided code snippet:\n\n```javascript\n<td><%= output.products[i].id %></td>\n```\n\n## Library Dependencies\n\nThe code example requires the following library dependencies:\n\n- Express.js: A web application framework for Node.js.\n- EJS: A templating engine for generating HTML with JavaScript.\n\n## OWASP Resources\n\n- [Cross-Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)\n- [OWASP Cheat Sheet Series - Cross Site Scripting Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)\n\n## Common Weakness Enumeration (CWE)\n\n- [CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)"
-              },
-              "properties": {
-                "cwe": [
-                  {
-                    "id": "CWE-79",
-                    "url": "https://cwe.mitre.org/data/definitions/79.html"
-                  }
-                ],
-                "kind": "FAIL",
-                "security-severity": "5.0",
-                "tags": [
-                  "security",
-                  "CWE-79"
-                ]
-              }
-            },
-            {
               "id": "e9af2c2f-796a-31f5-b7d1-e8128751ed05",
               "name": "Deprecated Mathjs Eval Vulnerable To Code Injection",
               "helpUri": "https://www.glog.ai/",
@@ -1706,29 +1545,6 @@
               }
             },
             {
-              "id": "eea8c66b-a05a-3fb0-a7c4-9861b1d75cd4",
-              "name": "Explicit Unescape In EJS Template",
-              "helpUri": "https://www.glog.ai/",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\n\"EJS Template XSS Vulnerability Detected Due to Unescaped External Data\" is a vulnerability that occurs when unescaped external data is used in an EJS template. This can lead to Cross-Site Scripting (XSS) attacks, where an attacker can inject malicious scripts into web pages viewed by other users. These scripts can steal sensitive information, manipulate web content, or perform actions on behalf of the user without their consent.\n\nIn the provided code snippet, the product code is being outputted directly into the HTML without any form of escaping or sanitization. This means that if the product code contains any malicious scripts, they will be executed when the page is loaded.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should always escape external data before using it in your templates. This can be done using the `escape` function provided by EJS, or by using a library that provides HTML escaping functionality.\n\n## Source Code Fix Recommendation\n\nHere is a fixed version of the provided code snippet:\n\n```javascript\n<td><%= ejs.escape(output.products[i].code) %></td>\n```\n\nIn this version, the product code is escaped using the `escape` function before it is outputted into the HTML. This ensures that any potentially malicious scripts in the product code are not executed.\n\n## Library Dependencies\n\nThe code example requires the following library dependencies to execute properly:\n\n- EJS\n\n## OWASP and CWE Links\n\n- [OWASP Cross-Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)\n- [CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)"
-              },
-              "properties": {
-                "cwe": [
-                  {
-                    "id": "CWE-79",
-                    "url": "https://cwe.mitre.org/data/definitions/79.html"
-                  }
-                ],
-                "kind": "FAIL",
-                "security-severity": "5.0",
-                "tags": [
-                  "security",
-                  "CWE-79"
-                ]
-              }
-            },
-            {
               "id": "f0fdd933-a28a-3c62-96c9-3ab6fdb8e3bc",
               "name": "Insecure Cookie Settings For Session Management",
               "helpUri": "https://www.glog.ai/",
@@ -1771,52 +1587,6 @@
                 "tags": [
                   "security",
                   "CWE-94"
-                ]
-              }
-            },
-            {
-              "id": "f5f2ad76-f1a4-300a-8024-a03f01c1b1e6",
-              "name": "Unescaped EJS Output Allows XSS Attacks",
-              "helpUri": "https://www.glog.ai/",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\n\"Detected Unescaped EJS Output Vulnerability Allowing XSS Attacks\" is a security vulnerability in JavaScript programming language that occurs when user input is not properly sanitized or escaped before being rendered on a webpage. This can lead to Cross-Site Scripting (XSS) attacks, where an attacker can inject malicious scripts into webpages viewed by other users. These scripts can steal sensitive information, perform actions on behalf of the user, or exploit other vulnerabilities in the user's browser or system.\n\nIn the provided code snippet, the vulnerability lies in the use of `<%-` instead of `<%=`, which results in unescaped output. This means that if `output.products[i].code` contains any malicious scripts, they will be executed when the page is rendered.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, always escape user input before rendering it on a webpage. This can be done by using `<%=` instead of `<%-` in EJS templates. This will ensure that any HTML special characters in the user input are converted to their corresponding HTML entities, preventing any scripts from being executed.\n\n## Source Code Fix Recommendation\n\nHere is the fixed version of the provided code snippet:\n\n```javascript\n<td><%= output.products[i].code %></td>\n```\n\n## Library Dependencies\n\nThe code example requires the following library dependencies to execute properly:\n\n- EJS (Embedded JavaScript templates)\n\n## References\n\n- [OWASP XSS (Cross Site Scripting) Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)\n- [CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)"
-              },
-              "properties": {
-                "cwe": [
-                  {
-                    "id": "CWE-79",
-                    "url": "https://cwe.mitre.org/data/definitions/79.html"
-                  }
-                ],
-                "kind": "FAIL",
-                "security-severity": "5.0",
-                "tags": [
-                  "security",
-                  "CWE-79"
-                ]
-              }
-            },
-            {
-              "id": "f911562e-85e2-3125-8c23-1410d5ec3020",
-              "name": "Explicit Unescape In EJS Template",
-              "helpUri": "https://www.glog.ai/",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\n\"EJS Template XSS Vulnerability Detected Due to Unescaped External Data\" is a vulnerability that occurs when unescaped external data is used in an EJS template. This can lead to Cross-Site Scripting (XSS) attacks, where an attacker can inject malicious scripts into web pages viewed by other users. These scripts can steal sensitive information, manipulate web content, or perform other harmful actions.\n\nIn the provided code snippet, the vulnerability arises from the use of `<%-` instead of `<%=`, which results in unescaped output. This means that if `output.products[i].id` contains any malicious scripts, they will be executed when the page is rendered.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, always escape external data before using it in your templates. This can be done by using `<%=` instead of `<%-` in your EJS templates. This will ensure that any HTML special characters in the data are properly escaped, preventing any scripts from being executed.\n\n## Source Code Fix Recommendation\n\nHere is the fixed version of the provided code snippet:\n\n```javascript\n<td><%= output.products[i].id %></td>\n```\n\n## Library Dependencies\n\nThe code example requires the following library dependencies to execute properly:\n\n- EJS\n\n## OWASP and CWE Resources\n\n- [OWASP Cross-Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)\n- [CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)"
-              },
-              "properties": {
-                "cwe": [
-                  {
-                    "id": "CWE-79",
-                    "url": "https://cwe.mitre.org/data/definitions/79.html"
-                  }
-                ],
-                "kind": "FAIL",
-                "security-severity": "5.0",
-                "tags": [
-                  "security",
-                  "CWE-79"
                 ]
               }
             },
@@ -3597,7 +3367,7 @@
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "Insecure Logging Configuration In Sequelize"
+            "text": "Insecure Logging Configuration"
           },
           "locations": [
             {
@@ -4255,356 +4025,6 @@
           },
           "fingerprints": {
             "glog-fp-ruleFileCode/v1": "9f048a5ec37c6012b282b675c4d4e6f869e577fce3868ca8524d3677c3bd603f"
-          }
-        },
-        {
-          "ruleId": "e98f11bd-d469-3d24-aa10-8a0ffc00adb0",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Unescaped EJS Output Allows XSS Attacks"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "views/app/products.ejs",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 49,
-                  "startColumn": 21,
-                  "endLine": 49,
-                  "endColumn": 47,
-                  "snippet": {
-                    "text": "                <td><%- output.products[i].id %></td>"
-                  },
-                  "sourceLanguage": "javascript"
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "glog-pfp-ruleFileLineCode/v1": "99199f9eff5919ad276f52922e031a224bcc788b005e7d588b11aaa529b8914f",
-            "glog-pfp-ruleFileCode/v1": "b1b4bf056953ffb382d3382ae68a6580c4e5a1620204261bd17a003842690433"
-          },
-          "fingerprints": {
-            "glog-fp-ruleFileCode/v1": "b1b4bf056953ffb382d3382ae68a6580c4e5a1620204261bd17a003842690433"
-          }
-        },
-        {
-          "ruleId": "f911562e-85e2-3125-8c23-1410d5ec3020",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Explicit Unescape In EJS Template"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "views/app/products.ejs",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 49,
-                  "startColumn": 21,
-                  "endLine": 49,
-                  "endColumn": 49,
-                  "snippet": {
-                    "text": "                <td><%- output.products[i].id %></td>"
-                  },
-                  "sourceLanguage": "javascript"
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "glog-pfp-ruleFileLineCode/v1": "59cd1c904243afea749b34887c470647d3da9cf607b01a50eea983e3f1a576b2",
-            "glog-pfp-ruleFileCode/v1": "623dce17c24e0de944cfcc6ff6cebcd6295d8ae733207f247cdee04c9c4b6c1b"
-          },
-          "fingerprints": {
-            "glog-fp-ruleFileCode/v1": "623dce17c24e0de944cfcc6ff6cebcd6295d8ae733207f247cdee04c9c4b6c1b"
-          }
-        },
-        {
-          "ruleId": "9ddac073-078f-3f4f-be28-cec815d2e54b",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Unescaped EJS Output Allows XSS Attacks"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "views/app/products.ejs",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 50,
-                  "startColumn": 21,
-                  "endLine": 50,
-                  "endColumn": 49,
-                  "snippet": {
-                    "text": "                <td><%- output.products[i].name %></td>"
-                  },
-                  "sourceLanguage": "javascript"
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "glog-pfp-ruleFileLineCode/v1": "77f34260dcc775ba0fac544a4cc00f3d8b4aac11a61939aadbad6abf5d14e6db",
-            "glog-pfp-ruleFileCode/v1": "7188319779a3b808db65319db7c77bfa1d646768c262c9d71c36815cc558e78e"
-          },
-          "fingerprints": {
-            "glog-fp-ruleFileCode/v1": "7188319779a3b808db65319db7c77bfa1d646768c262c9d71c36815cc558e78e"
-          }
-        },
-        {
-          "ruleId": "a4078dd5-7e65-3838-a623-e91351920969",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Explicit Unescape In EJS Template"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "views/app/products.ejs",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 50,
-                  "startColumn": 21,
-                  "endLine": 50,
-                  "endColumn": 51,
-                  "snippet": {
-                    "text": "                <td><%- output.products[i].name %></td>"
-                  },
-                  "sourceLanguage": "javascript"
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "glog-pfp-ruleFileLineCode/v1": "f5fe4b6c8fea772ebaa7525af473f5da89c8874a9b07db45241f9e3ff1360587",
-            "glog-pfp-ruleFileCode/v1": "e4cc2b509d0ca5613ece9b6f24f8df80fa38ec4206ddcbf3a621f627b41dfa1d"
-          },
-          "fingerprints": {
-            "glog-fp-ruleFileCode/v1": "e4cc2b509d0ca5613ece9b6f24f8df80fa38ec4206ddcbf3a621f627b41dfa1d"
-          }
-        },
-        {
-          "ruleId": "f5f2ad76-f1a4-300a-8024-a03f01c1b1e6",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Unescaped EJS Output Allows XSS Attacks"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "views/app/products.ejs",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 51,
-                  "startColumn": 21,
-                  "endLine": 51,
-                  "endColumn": 49,
-                  "snippet": {
-                    "text": "                <td><%- output.products[i].code %></td>"
-                  },
-                  "sourceLanguage": "javascript"
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "glog-pfp-ruleFileLineCode/v1": "3a94d67a4ca2cfcd60265aed3509a42bb012d8ca9392f3a002c8cf3e272dbb67",
-            "glog-pfp-ruleFileCode/v1": "9a0e7b81a175ad4f1e30892df03972c781869b63dcaecd44aa2bec724a29f309"
-          },
-          "fingerprints": {
-            "glog-fp-ruleFileCode/v1": "9a0e7b81a175ad4f1e30892df03972c781869b63dcaecd44aa2bec724a29f309"
-          }
-        },
-        {
-          "ruleId": "eea8c66b-a05a-3fb0-a7c4-9861b1d75cd4",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Explicit Unescape In EJS Template"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "views/app/products.ejs",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 51,
-                  "startColumn": 21,
-                  "endLine": 51,
-                  "endColumn": 51,
-                  "snippet": {
-                    "text": "                <td><%- output.products[i].code %></td>"
-                  },
-                  "sourceLanguage": "javascript"
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "glog-pfp-ruleFileLineCode/v1": "a16e957546df336ec67a5cd44af89b5aad7478b8cb2cb946478a21aefca442df",
-            "glog-pfp-ruleFileCode/v1": "e90704a0febf3ac7b6ae9697a03fd1bee82b7aba727131a73c56510058ebe9e3"
-          },
-          "fingerprints": {
-            "glog-fp-ruleFileCode/v1": "e90704a0febf3ac7b6ae9697a03fd1bee82b7aba727131a73c56510058ebe9e3"
-          }
-        },
-        {
-          "ruleId": "6402bde6-4b8f-382b-8889-386c2b48e4c5",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Unescaped EJS Output Allows XSS Attacks"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "views/app/products.ejs",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 52,
-                  "startColumn": 21,
-                  "endLine": 52,
-                  "endColumn": 49,
-                  "snippet": {
-                    "text": "                <td><%- output.products[i].tags %></td>"
-                  },
-                  "sourceLanguage": "javascript"
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "glog-pfp-ruleFileLineCode/v1": "0933d1b4e95aa5a06797d4e4bfa5d4022908a3806ed2943dfea7a2b4fc893190",
-            "glog-pfp-ruleFileCode/v1": "bad36fa4d64fbebb4f063d8f33e2c47172fb9aab80f9cf58b32dca5b772c301e"
-          },
-          "fingerprints": {
-            "glog-fp-ruleFileCode/v1": "bad36fa4d64fbebb4f063d8f33e2c47172fb9aab80f9cf58b32dca5b772c301e"
-          }
-        },
-        {
-          "ruleId": "2f335277-0daf-3f5d-aec0-0236fed03f90",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Explicit Unescape In EJS Template"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "views/app/products.ejs",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 52,
-                  "startColumn": 21,
-                  "endLine": 52,
-                  "endColumn": 51,
-                  "snippet": {
-                    "text": "                <td><%- output.products[i].tags %></td>"
-                  },
-                  "sourceLanguage": "javascript"
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "glog-pfp-ruleFileLineCode/v1": "d0667ca49eef857521d348bf6ebd8b1fa5e67e16d04738380de44c38f4a75501",
-            "glog-pfp-ruleFileCode/v1": "e26a7985878927a8ea4dbd49d7c03a110623671d910c94af5871399ab3ed437f"
-          },
-          "fingerprints": {
-            "glog-fp-ruleFileCode/v1": "e26a7985878927a8ea4dbd49d7c03a110623671d910c94af5871399ab3ed437f"
-          }
-        },
-        {
-          "ruleId": "da3dd6af-a082-3745-9e08-885cad581ed2",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Unescaped EJS Output Allows XSS Attacks"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "views/app/products.ejs",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 53,
-                  "startColumn": 21,
-                  "endLine": 53,
-                  "endColumn": 56,
-                  "snippet": {
-                    "text": "                <td><%- output.products[i].description %></td>"
-                  },
-                  "sourceLanguage": "javascript"
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "glog-pfp-ruleFileLineCode/v1": "2c4b9220afaa778d43f257608832d03cc6ab7592c18c8077380c471fdc6a7367",
-            "glog-pfp-ruleFileCode/v1": "53821e3b4756367d1c6ebeebbe012119146e32634b2bea0b11dbcef35a88926f"
-          },
-          "fingerprints": {
-            "glog-fp-ruleFileCode/v1": "53821e3b4756367d1c6ebeebbe012119146e32634b2bea0b11dbcef35a88926f"
-          }
-        },
-        {
-          "ruleId": "b9d092ad-9fe6-37c3-a547-9d2e7e325016",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Explicit Unescape In EJS Template"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "views/app/products.ejs",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 53,
-                  "startColumn": 21,
-                  "endLine": 53,
-                  "endColumn": 58,
-                  "snippet": {
-                    "text": "                <td><%- output.products[i].description %></td>"
-                  },
-                  "sourceLanguage": "javascript"
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "glog-pfp-ruleFileLineCode/v1": "64622fbe5d3f6b0ff70f2fea0a9ecd485892a0a6cb0875994c593bf1f04acde3",
-            "glog-pfp-ruleFileCode/v1": "f60ba37340335a3b8917069c9db08de01f26bd30816ce05262812e0cada3e280"
-          },
-          "fingerprints": {
-            "glog-fp-ruleFileCode/v1": "f60ba37340335a3b8917069c9db08de01f26bd30816ce05262812e0cada3e280"
           }
         },
         {
