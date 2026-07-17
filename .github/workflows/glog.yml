@@ -28,4 +28,5 @@ jobs:
           glog-token: ${{ secrets.GLOG_TOKEN }}
           scl-uuid: '77063b16-e039-4f74-b60d-37bcb87a35f3'
           upload-source: 'GITHUB'
+          sbom: 'true'
     
