@@ -1,0 +1,31 @@
+name: Glog Scan
+on:
+  workflow_dispatch:
+
+jobs:
+  glog-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Checkout glog-action repository
+        uses: actions/checkout@v6
+        with:
+          repository: glogai/glog-action
+          token: ${{ secrets.PAT_TOKEN }}
+          path: .github/glog-action
+          ref: main
+
+      - name: Run Glog.AI
+        uses: ./.github/glog-action
+        with:
+          client: 'swissdemo'
+          upload: 'true'
+          github-token: ${{ secrets.PAT_TOKEN }}
+          glog-token: ${{ secrets.GLOG_TOKEN }}
+          scl-uuid: '77063b16-e039-4f74-b60d-37bcb87a35f3'
+          upload-source: 'GITHUB'
+    
