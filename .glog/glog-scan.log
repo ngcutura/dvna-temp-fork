@@ -1,2 +1,30 @@
-Jul 03, 2026 10:00:16 AM ai.glog.inventory.ComponentResolver resolve
-INFO: Resolved component_uuid=165daf1b-e786-404c-9ae9-92408e06f079 status=pending is_new=false
+Jul 17, 2026 9:38:30 AM ai.glog.inventory.ComponentResolver resolve
+WARNING: Inventory resolve failed: Request to inventory/resolver/components/resolve/ failed with status 404: 
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Not Found</title>
+</head>
+<body>
+  <h1>Not Found</h1><p>The requested resource was not found on this server.</p>
+</body>
+</html>
+
+java.io.IOException: Request to inventory/resolver/components/resolve/ failed with status 404: 
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Not Found</title>
+</head>
+<body>
+  <h1>Not Found</h1><p>The requested resource was not found on this server.</p>
+</body>
+</html>
+
+	at ai.glog.inventory.InventoryClient.post(InventoryClient.java:220)
+	at ai.glog.inventory.InventoryClient.resolveComponent(InventoryClient.java:90)
+	at ai.glog.inventory.ComponentResolver.resolve(ComponentResolver.java:81)
+	at ai.glog.execute.GlogTriage.resolveComponentUuid(GlogTriage.java:1734)
+	at ai.glog.execute.GlogTriage.execute(GlogTriage.java:87)
+	at ai.glog.GlogCommandLine.main(GlogCommandLine.java:146)
+
