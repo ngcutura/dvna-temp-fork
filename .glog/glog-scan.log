@@ -1,26 +1,6 @@
-Jul 17, 2026 9:38:30 AM ai.glog.inventory.ComponentResolver resolve
-WARNING: Inventory resolve failed: Request to inventory/resolver/components/resolve/ failed with status 404: 
-<!doctype html>
-<html lang="en">
-<head>
-  <title>Not Found</title>
-</head>
-<body>
-  <h1>Not Found</h1><p>The requested resource was not found on this server.</p>
-</body>
-</html>
-
-java.io.IOException: Request to inventory/resolver/components/resolve/ failed with status 404: 
-<!doctype html>
-<html lang="en">
-<head>
-  <title>Not Found</title>
-</head>
-<body>
-  <h1>Not Found</h1><p>The requested resource was not found on this server.</p>
-</body>
-</html>
-
+Jul 21, 2026 4:28:45 PM ai.glog.inventory.ComponentResolver resolve
+WARNING: Inventory resolve failed: Request to inventory/resolver/components/resolve/ failed with status 401: {"detail":"Invalid token."}
+java.io.IOException: Request to inventory/resolver/components/resolve/ failed with status 401: {"detail":"Invalid token."}
 	at ai.glog.inventory.InventoryClient.post(InventoryClient.java:220)
 	at ai.glog.inventory.InventoryClient.resolveComponent(InventoryClient.java:90)
 	at ai.glog.inventory.ComponentResolver.resolve(ComponentResolver.java:81)
@@ -28,3 +8,2808 @@ java.io.IOException: Request to inventory/resolver/components/resolve/ failed wi
 	at ai.glog.execute.GlogTriage.execute(GlogTriage.java:87)
 	at ai.glog.GlogCommandLine.main(GlogCommandLine.java:146)
 
+Jul 21, 2026 4:29:04 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.glog-javascript.glog-child-process-import. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:29:36 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.javascript.sequelize-enforce-tls. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:29:36 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.typescript.sequelize-enforce-tls. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:30:03 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-child-process-import. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:30:11 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-child-process-import. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:30:12 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-child-process-import. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:30:19 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-child-process-import. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:30:46 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.typescript.sequelize-enforce-tls. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:30:47 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.javascript.sequelize-enforce-tls. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:30:49 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.javascript.sequelize-enforce-tls. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:30:49 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.typescript.sequelize-enforce-tls. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:31:08 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.glog-javascript.glog-child-process-import. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:31:13 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.glog-javascript.glog-child-process-import. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:31:30 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.glog-javascript.glog-xml-parser-import. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:31:33 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.javascript.sequelize-enforce-tls. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:31:34 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.typescript.sequelize-enforce-tls. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:32:00 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.glog-javascript.glog-vulnerable-serialize-import. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:32:08 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.typescript.raw-html-concat. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:32:28 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.typescript.raw-html-concat. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:32:48 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-xml-parser-import. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:32:50 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-xml-parser-import. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:33:02 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.javascript.raw-html-concat. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:33:13 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.glog-javascript.glog-xml-parser-import. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:33:29 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.javascript.raw-html-concat. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:33:46 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.javascript.raw-html-concat. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:33:48 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-vulnerable-serialize-import. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:33:53 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.typescript.raw-html-concat. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:33:56 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-vulnerable-serialize-import. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:34:17 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.javascript.raw-html-concat. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:34:24 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.javascript.node_sqli_injection. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:34:37 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.javascript.sequelize-raw-query. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:34:44 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.glog-javascript.glog-vulnerable-serialize-import. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:34:52 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.typescript.raw-html-concat. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:35:21 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.javascript.node_sqli_injection. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:35:23 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.glog-javascript.glog-sql-injection-sequelize-taint. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:35:23 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.javascript.node_sqli_injection. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:35:32 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.javascript.non-constant-sql-query. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:35:59 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.javascript.sequelize-raw-query. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:36:02 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.javascript.sequelize-raw-query. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:36:17 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-sql-injection-sequelize-taint. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:36:32 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.javascript.non-constant-sql-query. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:36:32 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.javascript.non-constant-sql-query. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:36:36 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-sql-injection-sequelize-taint. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:36:43 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.javascript.node_sqli_injection. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:36:50 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.javascript.non-constant-sql-query. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:37:05 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.javascript.sequelize-raw-query. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:37:08 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.glog-javascript.glog-no-error-handling. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:37:26 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.javascript.sequelize-express. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:37:28 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.glog-javascript.glog-sql-injection-sequelize-taint. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:37:31 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.typescript.non-constant-sql-query. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:38:23 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.javascript.sequelize-express. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:38:23 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.javascript.sequelize-express. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:38:29 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.typescript.sequelize-express. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:38:52 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-no-error-handling. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:38:53 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.typescript.non-constant-sql-query. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:39:00 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-no-error-handling. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:39:01 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.typescript.non-constant-sql-query. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:39:07 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.javascript.sequelize-express. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:39:17 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.typescript.sequelize-express. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:39:17 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.typescript.sequelize-express. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:39:35 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.typescript.sequelize-express. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:39:53 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.javascript.detect-child-process. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:39:58 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.typescript.non-constant-sql-query. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:40:06 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.glog-javascript.glog-no-error-handling. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:40:12 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.glog-javascript.glog-command-injection-exec. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:40:57 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.javascript.detect-child-process. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:40:59 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.javascript.raw-html-concat. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:41:00 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.javascript.detect-child-process. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:41:14 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.javascript.raw-html-concat. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:41:17 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.typescript.detect-child-process. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:41:18 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-command-injection-exec. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:41:20 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-command-injection-exec. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:41:48 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.javascript.detect-child-process. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:41:53 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.javascript.raw-html-concat. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:42:09 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.typescript.detect-child-process. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:42:10 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.typescript.detect-child-process. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:42:19 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.glog-javascript.glog-command-injection-exec. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:42:47 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.typescript.detect-child-process. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:42:50 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.typescript.raw-html-concat. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:42:50 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.typescript.raw-html-concat. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:42:54 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.typescript.express-child-process. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:42:55 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.javascript.express-child-process. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:43:31 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker fetchInternalRuleId
+WARNING: Failed to resolve internal rule id for javascript/resources.rules.glog-javascript.glog-findall-no-attributes. Falling back to source rule id.
+java.io.IOException: HTTP 500 for endpoint 'remediation/internal-rule-id'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getInternalRuleId(GlogService.java:247)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.fetchInternalRuleId(TriageAndRemediationCallableWorker.java:749)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$resolveInternalRuleId$1(TriageAndRemediationCallableWorker.java:743)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.resolveInternalRuleId(TriageAndRemediationCallableWorker.java:742)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.createContext(TriageAndRemediationCallableWorker.java:150)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:103)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:43:33 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.typescript.raw-html-concat. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:44:07 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-findall-no-attributes. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:44:09 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.typescript.express-child-process. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:44:11 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-findall-no-attributes. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:44:20 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.javascript.express-child-process. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:44:25 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.typescript.express-child-process. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:44:27 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.javascript.express-child-process. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:44:29 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.glog-javascript.glog-findall-no-attributes. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:45:05 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-findall-no-attributes. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:45:08 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-no-error-handling. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:45:08 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-findall-no-attributes. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:45:17 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-no-error-handling. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:45:26 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.glog-javascript.glog-findall-no-attributes. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:45:41 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.javascript.express-child-process. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:45:41 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.typescript.express-child-process. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:46:21 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-no-error-handling. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:46:22 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-no-error-handling. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:46:25 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.glog-javascript.glog-no-error-handling. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:46:41 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.javascript.raw-html-concat. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:46:42 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.typescript.raw-html-concat. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:46:59 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-findall-no-attributes. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:47:02 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.typescript.raw-html-concat. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:47:04 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.javascript.raw-html-concat. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:47:27 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.glog-javascript.glog-findall-no-attributes. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:47:47 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.glog-javascript.glog-no-error-handling. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:47:48 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.javascript.raw-html-concat. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:47:50 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-findall-no-attributes. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:48:02 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker call
+WARNING: Failed to fetch remediation for javascript/resources.rules.typescript.raw-html-concat. Using original finding.
+java.io.IOException: HTTP 500 for endpoint 'remediation/general'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.service.GlogService.getGeneralRemediation(GlogService.java:214)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processGeneralRemediation(TriageAndRemediationCallableWorker.java:1225)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1127)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:48:23 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker lambda$processSinkRemediation$2
+WARNING: False-positive detection request failed for javascript/resources.rules.glog-javascript.glog-no-error-handling. Continuing without false-positive signal.
+java.io.IOException: HTTP 500 for endpoint 'remediation/detect-false-positive'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.lambda$processSinkRemediation$2(TriageAndRemediationCallableWorker.java:1163)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:48:27 PM ai.glog.execute.workers.TriageAndRemediationCallableWorker setGeneralRemediation
+WARNING: Sink remediation failed for javascript/resources.rules.glog-javascript.glog-no-error-handling. Falling back to general remediation.
+java.io.IOException: HTTP 500 for endpoint 'remediation/sink'. Response: <html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+	at ai.glog.service.GlogService.ensureSuccessfulResponse(GlogService.java:992)
+	at ai.glog.service.GlogService.postRequest(GlogService.java:808)
+	at ai.glog.service.GlogService.getFromGlog(GlogService.java:773)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processSinkRemediation(TriageAndRemediationCallableWorker.java:1174)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1116)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.setGeneralRemediation(TriageAndRemediationCallableWorker.java:1102)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processWithResolver(TriageAndRemediationCallableWorker.java:211)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.processResult(TriageAndRemediationCallableWorker.java:200)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:106)
+	at ai.glog.execute.workers.TriageAndRemediationCallableWorker.call(TriageAndRemediationCallableWorker.java:50)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+Jul 21, 2026 4:48:47 PM ai.glog.execute.GlogTriage execute
+WARNING: Timeout! 78 task(s) didn't finish. Writing partial results.
