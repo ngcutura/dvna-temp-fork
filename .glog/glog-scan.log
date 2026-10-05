@@ -1,4 +1,4 @@
-Oct 04, 2026 7:44:16 PM ai.glog.d.e a
+Oct 05, 2026 1:37:50 PM ai.glog.d.e a
 WARNING: Failed to build CPG for language 'javascript'. Falling back to non-CPG triage for this language.
 com.typesafe.config.ConfigException$Missing: merge of system properties,application.conf @ jar:file:/opt/glog/glog-resolver-jar-with-dependencies.jar!/application.conf: 1: No configuration setting found for key 'jssrc2cpg'
 	at com.typesafe.config.impl.SimpleConfig.findKeyOrNull(SourceFile:157)
@@ -32,69 +32,7 @@ com.typesafe.config.ConfigException$Missing: merge of system properties,applicat
 	at ai.glog.d.e.a(SourceFile:271)
 	at ai.glog.GlogCommandLine.main(SourceFile:154)
 
-Oct 04, 2026 7:44:16 PM ai.glog.d.e a
+Oct 05, 2026 1:37:50 PM ai.glog.d.e a
 INFO: Glog: deduplicated findings for 'javascript': 0 same-scanner group(s) folding 0 finding(s), 0 cross-scanner group(s) folding 0 finding(s) (0 family candidate(s), 16 outside any resolvable function).
-Oct 04, 2026 7:44:16 PM ai.glog.e.a a
-SEVERE: explicit scl_uuid=77063b16-e039-4f74-b60d-37bcb87a35f3 could not be bound: IOException: Request to inventory/resolver/components/resolve/ failed with status 401: {"detail":"Invalid token."}
-java.io.IOException: Request to inventory/resolver/components/resolve/ failed with status 401: {"detail":"Invalid token."}
-	at ai.glog.e.c.a(SourceFile:282)
-	at ai.glog.e.c.a(SourceFile:98)
-	at ai.glog.e.a.a(SourceFile:58)
-	at ai.glog.d.e.d(SourceFile:4348)
-	at ai.glog.d.e.a(SourceFile:4292)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-
-Oct 04, 2026 7:44:16 PM ai.glog.d.e d
-SEVERE: Glog: upload failed | endpoint=inventory/resolver/components/resolve/ | reason=explicit scl_uuid=77063b16-e039-4f74-b60d-37bcb87a35f3 could not be bound: IOException: Request to inventory/resolver/components/resolve/ failed with status 401: {"detail":"Invalid token."}
-Oct 04, 2026 7:44:18 PM ai.glog.d.e a
+Oct 05, 2026 1:37:54 PM ai.glog.d.e a
 INFO: Glog: deduplicated findings for 'python': 0 same-scanner group(s) folding 0 finding(s), 0 cross-scanner group(s) folding 0 finding(s) (0 family candidate(s), 0 outside any resolvable function).
-Oct 04, 2026 7:44:19 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=11, response=null, error=Invalid GLOGSERVICE token (status 401).). Falling back to single-item calls.
-Oct 04, 2026 7:44:20 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=8, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:21 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=4, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:21 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=4, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:22 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=5, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:23 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=4, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:24 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=5, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:24 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=5, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:25 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=4, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:26 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=4, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:27 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=2, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:27 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=2, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:28 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=3, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:29 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=4, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:30 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=3, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:30 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=3, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:31 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=4, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:32 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=4, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:33 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=4, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:33 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=6, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:34 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=6, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:35 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=5, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:36 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=3, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:36 PM ai.glog.d.a.a$a b
-WARNING: Bulk remediation/internal-rule-id call unusable (items=2, response=null, error=Scan aborted: invalid GLOGSERVICE token.). Falling back to single-item calls.
-Oct 04, 2026 7:44:39 PM ai.glog.GlogCommandLine main
-SEVERE: UPLOAD_FAILED count=1 tier=full details=[inventory/resolver/components/resolve/ -> explicit scl_uuid=77063b16-e039-4f74-b60d-37bcb87a35f3 could not be bound: IOException: Request to inventory/resolver/components/resolve/ failed with status 401: {"detail":"Invalid token."}]
